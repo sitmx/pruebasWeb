@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.custom.i18n.resources" value="global" />
+	<constant name="struts.i18n.encoding" value="utf-8" />
+	<constant name="struts.xwork.chaining.copyErrors" value="true" />
+	<constant name="struts.multipart.maxSize" value="26214400" />
+
+	<constant name="struts.serve.static.browserCache" value="true" />
+	<constant name="struts.objectFactory.spring.autoWire" value="name" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+
+	<constant name="struts.action.extension" value="html" />
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.objectFactory"
+		value="org.apache.struts2.spring.StrutsSpringObjectFactory" />
+	<constant name="struts.convention.classes.reload" value="true" />
+	<constant name="struts.convention.result.path" value="/common/jsp/gescomer" />
+	<constant name="struts.convention.action.packages" value="mx.com.sit.gescomer" />
+	<constant name="struts.date.format" value="dd/MM/yyyyy"/>
+	<constant name="struts.convention.default.parent.package"
+		value="restful" />
+
+
+	<package name="restful" namespace="/"
+		extends="rest-default, struts-default, json-default">
+
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+
+		<interceptors>
+			<interceptor name="htmltopdff" class="mx.com.sit.gescomer.interceptor.DecoratorInterceptor"/>			
+			<interceptor name="exception" 	class="com.opensymphony.xwork2.interceptor.ExceptionMappingInterceptor" />
+			<interceptor name="fileUpload"	class="org.apache.struts2.interceptor.FileUploadInterceptor" />
+			<interceptor-stack name="defaultstack">
+				<interceptor-ref name="exception" />
+				<interceptor-ref name="alias" />
+				<interceptor-ref name="servletConfig" />
+				<interceptor-ref name="fileUpload">
+					<param name="allowedTypes">*/*</param>
+					<param name="maximumSize">71680000</param>
+				</interceptor-ref>
+				<interceptor-ref name="i18n" />
+				<interceptor-ref name="store">
+					<param name="operationMode">STORE</param>
+				</interceptor-ref>
+				<interceptor-ref name="chain" />
+				<interceptor-ref name="modelDriven" />
+				<interceptor-ref name="staticParams" />
+
+				<interceptor-ref name="params" />
+			</interceptor-stack>
+			<interceptor-stack name="jsonValidationWorkflowStack">
+				<interceptor-ref name="basicStack" />
+				<interceptor-ref name="validation">
+					<param name="includeMethods">
+						insertarUsuarios,
+						actualizarUsuarios,
+						duplicarUsuarios,
+						insertarAreas,
+						actualizarAreas,
+						duplicarAreas,
+						insertarCatCatalogos,
+						actualizarCatCatalogos,
+						duplicarCatCatalogos,
+						insertarMenus,
+						actualizarMenus,
+						duplicarMenus,
+						insertarPaises,
+						actualizarPaises,
+						duplicarPaises,
+						insertarParametros,
+						actualizarParametros,
+						duplicarParametros,
+						insertarPerfiles,
+						actualizarPerfiles,
+						duplicarPerfiles,
+						insertarSepomex,
+						actualizarSepomex,
+						duplicarSepomex,
+						insertarMotivos,
+						actualizarMotivos,
+						duplicarMotivos,
+						insertarPuestos,
+						actualizarPuestos,
+						duplicarPuestos,
+						insertarDepartamentos,
+						actualizarDepartamentos,
+						duplicarDepartamentos,
+						insertarEmpleados,
+						actualizarEmpleados,
+						duplicarEmpleados,
+						insertarTraspasos,
+						actualizarTraspasos,
+						duplicarTraspasos,
+						insertarProspectos,
+						actualizarProspectos,
+						duplicarProspectos,
+						auditarTraspasos,
+						contactarRegistrarCita,
+						actualizarCita
+					</param>
+				</interceptor-ref>
+				<interceptor-ref name="jsonValidation" />
+				<interceptor-ref name="workflow" />
+			</interceptor-stack>
+
+		</interceptors>
+
+		<default-interceptor-ref name="defaultstack" />
+ 
+		<global-results>
+			<result  name="Exception">/jsp/gescomer/error/error.jsp</result>
+			<result name="login">/login/expiredSession.jsp</result>
+		</global-results>
+
+		<global-exception-mappings> 
+			<exception-mapping exception="mx.com.sit.gescomer.exception.BusinessException" result="Exception" /> 
+			<exception-mapping exception="java.lang.Exception" result="Exception" /> 
+			<exception-mapping exception="java.lang.NullPointerException" result="Exception" /> 
+			<exception-mapping exception="java.lang.ClassCastException" result="login" /> 
+		</global-exception-mappings> 
+
+	</package>
+
+</struts>
+

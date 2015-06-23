@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+        "-//Apache Struts//XWork Validator Definition 1.0//EN"
+        "http://struts.apache.org/dtds/xwork-validator-definition-1.0.dtd">
+<validators>
+	<validator name="telefonosProspecto" class="mx.com.sit.gescomer.validaciones.ProspectoTelefonoValidador"/>
+	<validator name="listaDocumentos" class="mx.com.sit.gescomer.validaciones.ListaDocumentosValidador"/>
+	<validator name="tipoTraspasoPapelCodigoTraspasoValidador" class="mx.com.sit.gescomer.validaciones.TipoTraspasoPapelCodigoTraspasoValidador"/>
+	<validator name="tipoTraspasoPapelEstadoCuentaValidador" class="mx.com.sit.gescomer.validaciones.TipoTraspasoPapelEstadoCuentaValidador"/>
+	<validator name="tipoTraspasoWebReferencia2CURPValidador" class="mx.com.sit.gescomer.validaciones.TipoTraspasoWebReferencia2CURPValidador"/>
+	<validator name="tipoTraspasoWebReferencia2FhNacimientoValidador" class="mx.com.sit.gescomer.validaciones.TipoTraspasoWebReferencia2FhNacimientoValidador"/>
+	<validator name="tipoTraspasoWebReferencia2LugarNacimientoValidador" class="mx.com.sit.gescomer.validaciones.TipoTraspasoWebReferencia2LugarNacimientoValidador"/>
+	<validator name="tipoTraspasoWebReferencia2NombreValidador" class="mx.com.sit.gescomer.validaciones.TipoTraspasoWebReferencia2NombreValidador"/>
+	<validator name="tipoTraspasoWebReferencia2ParentescoValidador" class="mx.com.sit.gescomer.validaciones.TipoTraspasoWebReferencia2ParentescoValidador"/>
+	<validator name="tipoTraspasoWebReferencia2TelefonoValidador" class="mx.com.sit.gescomer.validaciones.TipoTraspasoWebReferencia2TelefonoValidador"/>
+	<validator name="tipoTraspasoWebReferenciaCURPValidador" class="mx.com.sit.gescomer.validaciones.TipoTraspasoWebReferenciaCURPValidador"/>
+	<validator name="tipoTraspasoWebReferenciaFhNacimientoValidador" class="mx.com.sit.gescomer.validaciones.TipoTraspasoWebReferenciaFhNacimientoValidador"/>
+	<validator name="tipoTraspasoWebReferenciaLugarNacimientoValidador" class="mx.com.sit.gescomer.validaciones.TipoTraspasoWebReferenciaLugarNacimientoValidador"/>
+	<validator name="tipoTraspasoWebReferenciaNombreValidador" class="mx.com.sit.gescomer.validaciones.TipoTraspasoWebReferenciaNombreValidador"/>
+	<validator name="tipoTraspasoWebReferenciaParentescoValidador" class="mx.com.sit.gescomer.validaciones.TipoTraspasoWebReferenciaParentescoValidador"/>
+	<validator name="tipoTraspasoWebReferenciaTelefonoValidador" class="mx.com.sit.gescomer.validaciones.TipoTraspasoWebReferenciaTelefonoValidador"/>
+	<validator name="traspasoFechaImpresionValidador" class="mx.com.sit.gescomer.validaciones.TraspasoFechaImpresionValidador"/>
+	<validator name="traspasoCodigoTraspasoValidador" class="mx.com.sit.gescomer.validaciones.TraspasoCodigoTraspasoValidador"/>
+	<validator name="traspasoCodigoLlamadaValidador" class="mx.com.sit.gescomer.validaciones.TraspasoCodigoLlamadaValidador"/>
+	<validator name="traspasoFolioEstadoCuentaValidador" class="mx.com.sit.gescomer.validaciones.TraspasoFolioEstadoCuentaValidador"/>
+	<validator name="telefonosCatProspecto" class="mx.com.sit.gescomer.validaciones.ProspectoCatTelefonoValidador"/>
+	<validator name="citaLugarProspecto" class="mx.com.sit.gescomer.validaciones.ProspectoCitaLugarValidador"/>
+	<validator name="citaCalleNoProspecto" class="mx.com.sit.gescomer.validaciones.ProspectoCitaCalleNoValidador"/>
+	<validator name="citaColoniaProspecto" class="mx.com.sit.gescomer.validaciones.ProspectoCitaColoniaValidador"/>
+	<validator name="citaDelMunProspecto" class="mx.com.sit.gescomer.validaciones.ProspectoCitaDelMunValidador"/>
+	<validator name="citaCPProspecto" class="mx.com.sit.gescomer.validaciones.ProspectoCitaCPValidador"/>
+	<validator name="citaEstadoProspecto" class="mx.com.sit.gescomer.validaciones.ProspectoCitaEstadoValidador"/>
+	<validator name="citaPaisProspecto" class="mx.com.sit.gescomer.validaciones.ProspectoCitaPaisValidador"/>
+	<validator name="citaFechaProspecto" class="mx.com.sit.gescomer.validaciones.ProspectoCitaFechaValidador"/>
+	<validator name="citaHoraProspecto" class="mx.com.sit.gescomer.validaciones.ProspectoCitaHoraMinutoValidador"/>
+	<validator name="estatusProspecto" class="mx.com.sit.gescomer.validaciones.ProspectoEstatusValidador"/>
+	<validator name="curpValidador" class="mx.com.sit.gescomer.validaciones.TraspasoCurpValidador"/>
+	<validator name="nssValidador" class="mx.com.sit.gescomer.validaciones.TraspasoNssValidador"/>
+	<validator name="prospectoCurpValidador" class="mx.com.sit.gescomer.validaciones.ProspectoCurpValidador"/>
+	<validator name="prospectoNssValidador" class="mx.com.sit.gescomer.validaciones.ProspectoNssValidador"/>
+	<validator name="prospectoReasignacion" class="mx.com.sit.gescomer.validaciones.ProspectoReasignacionEjecutivoValidador"/>
+	<validator name="traspasoProspectoFotografia" class="mx.com.sit.gescomer.validaciones.TraspasoProspectoFotografiaValidador"/>
+	<validator name="traspasoAuditoriaTelefonoContacto" class="mx.com.sit.gescomer.validaciones.TraspasoAuditoriaTelefonoContactoValidador"/>
+	<validator name="traspasoConstanciaVisita" class="mx.com.sit.gescomer.validaciones.TraspasoConstanciaVisitaValidador"/>
+	<validator name="traspasoConfirmacion" class="mx.com.sit.gescomer.validaciones.TraspasoConfirmacionValidador"/>
+	<validator name="empleadoCorreoValidador" class="mx.com.sit.gescomer.validaciones.EmpleadoCorreoValidador"/>
+	<validator name="empleadoCorreo" class="mx.com.sit.gescomer.validaciones.EmpleadoCorreo"/>
+	<validator name="empleadoGteActivo" class="mx.com.sit.gescomer.validaciones.EmpleadoGteActivoValidador"/>
+	<validator name="empleadoNciValidador" class="mx.com.sit.gescomer.validaciones.EmpleadoNciValidador"/>
+	<validator name="prospectoCitaEstatus" class="mx.com.sit.gescomer.validaciones.ProspectoCitaEstatusValidador"/>
+	
+</validators>
